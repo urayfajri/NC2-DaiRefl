@@ -11,6 +11,9 @@
 		20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E65288E62E4004855F4 /* ContentView.swift */; };
 		20FD9E68288E62E4004855F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FD9E67288E62E4004855F4 /* Assets.xcassets */; };
 		20FD9E6B288E62E4004855F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FD9E6A288E62E4004855F4 /* Preview Assets.xcassets */; };
+		20FD9E86288FA8E1004855F4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E85288FA8E1004855F4 /* CoreDataManager.swift */; };
+		20FD9E89288FA965004855F4 /* DaiReflModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E87288FA965004855F4 /* DaiReflModel.xcdatamodeld */; };
+		20FD9E8B288FAA6A004855F4 /* GoalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E8A288FAA6A004855F4 /* GoalListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		20FD9E65288E62E4004855F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20FD9E67288E62E4004855F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20FD9E6A288E62E4004855F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		20FD9E85288FA8E1004855F4 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		20FD9E88288FA965004855F4 /* DaiReflModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DaiReflModel.xcdatamodel; sourceTree = "<group>"; };
+		20FD9E8A288FAA6A004855F4 /* GoalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +58,12 @@
 			isa = PBXGroup;
 			children = (
 				20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */,
-				20FD9E65288E62E4004855F4 /* ContentView.swift */,
+				20FD9E83288FA889004855F4 /* ViewModels */,
+				20FD9E84288FA89B004855F4 /* Views */,
 				20FD9E67288E62E4004855F4 /* Assets.xcassets */,
 				20FD9E69288E62E4004855F4 /* Preview Content */,
+				20FD9E85288FA8E1004855F4 /* CoreDataManager.swift */,
+				20FD9E87288FA965004855F4 /* DaiReflModel.xcdatamodeld */,
 			);
 			path = "NC2-DaiRefl";
 			sourceTree = "<group>";
@@ -65,6 +74,22 @@
 				20FD9E6A288E62E4004855F4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		20FD9E83288FA889004855F4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				20FD9E8A288FAA6A004855F4 /* GoalListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		20FD9E84288FA89B004855F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20FD9E65288E62E4004855F4 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20FD9E86288FA8E1004855F4 /* CoreDataManager.swift in Sources */,
+				20FD9E89288FA965004855F4 /* DaiReflModel.xcdatamodeld in Sources */,
 				20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */,
+				20FD9E8B288FAA6A004855F4 /* GoalListViewModel.swift in Sources */,
 				20FD9E64288E62E4004855F4 /* NC2_DaiReflApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +367,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		20FD9E87288FA965004855F4 /* DaiReflModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				20FD9E88288FA965004855F4 /* DaiReflModel.xcdatamodel */,
+			);
+			currentVersion = 20FD9E88288FA965004855F4 /* DaiReflModel.xcdatamodel */;
+			path = DaiReflModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 20FD9E58288E62E4004855F4 /* Project object */;
 }
