@@ -13,19 +13,24 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            TextField("Enter Goal Name", text: $goalListVM.name).textFieldStyle(RoundedBorderTextFieldStyle())
-            TextField("Enter Goal Description", text: $goalListVM.description).textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Enter Goal Name", text: $goalListVM.goalName).textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Enter Goal Description", text: $goalListVM.goalDescription).textFieldStyle(RoundedBorderTextFieldStyle())
             Button("Save") {
-                goalListVM.add()
+                goalListVM.saveGoal()
+                goalListVM.getAllGoals()
             }
             
-            List (1...20, id: \.self) { index in
-                Text("\(index)")
-                Text("\(index)")
+            List (goalListVM.goals, id: \.goalID) { goal in
+                Text(goal.goalName)
+                Text(goal.goalDescription)
             }
             
             Spacer()
-        }.padding()
+        }
+        .padding()
+        .onAppear(perform: {
+            goalListVM.getAllGoals()
+        })
     }
 }
 

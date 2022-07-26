@@ -14,7 +14,39 @@ class GoalListViewModel: ObservableObject {
     var goalDate: Date = Date()
     var goalDescription: String = ""
     
-    func addGoal() {
+    @Published var goals: [GoalViewModel] = []
     
+    func getAllGoals() {
+        goals = CoreDataManager.shared.getAllGoals().map(GoalViewModel.init)
+    }
+    
+    func saveGoal() {
+        let goal = Goal(context: CoreDataManager.shared.viewContext)
+        goal.goalName = goalName
+        goal.goalDate = goalDate
+        goal.goalDescription = goalDescription
+        
+        CoreDataManager.shared.saveGoal()
+    }
+}
+
+
+struct GoalViewModel {
+    let goal: Goal
+    
+    var goalID: NSManagedObjectID {
+        return goal.objectID
+    }
+    
+    var goalName: String {
+        return goal.goalName ?? ""
+    }
+    
+    var goalDescription: String {
+        return goal.goalDescription ?? ""
+    }
+    
+    var goalDate: Date {
+        return goal.goalDate ?? Date()
     }
 }
