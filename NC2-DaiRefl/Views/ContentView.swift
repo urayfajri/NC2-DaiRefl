@@ -9,28 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject private var goalListVM = GoalListViewModel()
-    
     var body: some View {
-        VStack {
-            TextField("Enter Goal Name", text: $goalListVM.goalName).textFieldStyle(RoundedBorderTextFieldStyle())
-            TextField("Enter Goal Description", text: $goalListVM.goalDescription).textFieldStyle(RoundedBorderTextFieldStyle())
-            Button("Save") {
-                goalListVM.saveGoal()
-                goalListVM.getAllGoals()
+        ZStack {
+            TabView {
+                HomeView().tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                }
+                CalendarView().tabItem {
+                    Image(systemName: "calendar")
+                    Text("Calendar")
+                }
             }
-            
-            List (goalListVM.goals, id: \.goalID) { goal in
-                Text(goal.goalName)
-                Text(goal.goalDescription)
-            }
-            
-            Spacer()
         }
-        .padding()
-        .onAppear(perform: {
-            goalListVM.getAllGoals()
-        })
     }
 }
 

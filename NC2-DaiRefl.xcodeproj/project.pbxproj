@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206F4A52288FC677008C0D25 /* AllGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A51288FC677008C0D25 /* AllGoalView.swift */; };
+		206F4A55288FC81E008C0D25 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A54288FC81E008C0D25 /* CalendarView.swift */; };
+		206F4A58288FCB32008C0D25 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A57288FCB32008C0D25 /* HomeView.swift */; };
 		20FD9E64288E62E4004855F4 /* NC2_DaiReflApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */; };
 		20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E65288E62E4004855F4 /* ContentView.swift */; };
 		20FD9E68288E62E4004855F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FD9E67288E62E4004855F4 /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		206F4A51288FC677008C0D25 /* AllGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGoalView.swift; sourceTree = "<group>"; };
+		206F4A54288FC81E008C0D25 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		206F4A57288FCB32008C0D25 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		20FD9E60288E62E4004855F4 /* NC2-DaiRefl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NC2-DaiRefl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_DaiReflApp.swift; sourceTree = "<group>"; };
 		20FD9E65288E62E4004855F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +44,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		206F4A50288FC663008C0D25 /* Goal */ = {
+			isa = PBXGroup;
+			children = (
+				206F4A51288FC677008C0D25 /* AllGoalView.swift */,
+			);
+			path = Goal;
+			sourceTree = "<group>";
+		};
+		206F4A53288FC80B008C0D25 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				206F4A54288FC81E008C0D25 /* CalendarView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		206F4A56288FCB1E008C0D25 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				206F4A57288FCB32008C0D25 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		20FD9E57288E62E4004855F4 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +117,10 @@
 		20FD9E84288FA89B004855F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				206F4A56288FCB1E008C0D25 /* Home */,
 				20FD9E65288E62E4004855F4 /* ContentView.swift */,
+				206F4A53288FC80B008C0D25 /* Calendar */,
+				206F4A50288FC663008C0D25 /* Goal */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,8 +196,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				20FD9E86288FA8E1004855F4 /* CoreDataManager.swift in Sources */,
+				206F4A55288FC81E008C0D25 /* CalendarView.swift in Sources */,
+				206F4A52288FC677008C0D25 /* AllGoalView.swift in Sources */,
 				20FD9E89288FA965004855F4 /* DaiReflModel.xcdatamodeld in Sources */,
 				20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */,
+				206F4A58288FCB32008C0D25 /* HomeView.swift in Sources */,
 				20FD9E8B288FAA6A004855F4 /* GoalListViewModel.swift in Sources */,
 				20FD9E64288E62E4004855F4 /* NC2_DaiReflApp.swift in Sources */,
 			);
