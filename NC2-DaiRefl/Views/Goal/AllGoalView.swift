@@ -21,31 +21,23 @@ struct AllGoalView: View {
                 }
             }
             .navigationTitle("All Goal")
+            .navigationBarTitleDisplayMode(.automatic)
+            .navigationViewStyle(.stack)
             .padding(.horizontal, 16)
             .onAppear(perform: {
                 goalListVM.getAllGoals()
             })
+            .navigationBarItems(
+                trailing:
+                    NavigationLink(
+                        destination: AddGoalView(),
+                        label: {
+                            Image(systemName: "plus.app")
+                        }
+                    )
+            )
             Spacer()
         }
-//        VStack {
-//            TextField("Enter Goal Name", text: $goalListVM.goalName).textFieldStyle(RoundedBorderTextFieldStyle())
-//            TextField("Enter Goal Description", text: $goalListVM.goalDescription).textFieldStyle(RoundedBorderTextFieldStyle())
-//            Button("Save") {
-//                goalListVM.saveGoal()
-//                goalListVM.getAllGoals()
-//            }
-//
-//            List (goalListVM.goals, id: \.goalID) { goal in
-//                Text(goal.goalName)
-//                Text(goal.goalDescription)
-//            }
-//
-//            Spacer()
-//        }
-//        .padding()
-//        .onAppear(perform: {
-//            goalListVM.getAllGoals()
-//        })
     }
 }
 

@@ -48,7 +48,7 @@ struct HomeView: View {
                             }
                         }
                         HStack {
-                            Text("Reflection Date").font(.caption)
+                            Text(Date(), style: .date).font(.caption)
                             Spacer()
                         }
                     }
