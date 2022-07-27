@@ -9,6 +9,8 @@ import SwiftUI
 
 struct GoalSubView: View {
     
+    let totalGoal: Int
+    
     var body: some View {
         ZStack {
             VStack (alignment: .leading) {
@@ -20,7 +22,7 @@ struct GoalSubView: View {
                     .padding(.leading)
                 
                 HStack {
-                    Text("23")
+                    Text(String(totalGoal))
                         .font(.subheadline).bold()
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)
@@ -42,11 +44,5 @@ struct GoalSubView: View {
         .background(Color.blue)
         .cornerRadius(12)
         .shadow(color: .blue, radius: 6, x: 0.0, y: 0.0)
-    }
-}
-
-struct GoalSubView_Previews: PreviewProvider {
-    static var previews: some View {
-        GoalSubView()
     }
 }

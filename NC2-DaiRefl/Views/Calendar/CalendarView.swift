@@ -10,10 +10,8 @@ import SwiftUI
 struct CalendarView: View {
     
     var body: some View {
-        VStack {
-            Spacer()
-            Text("Halaman Calendar")
-            Spacer()
+        List (0...20, id: \.self) { index in
+            Text("\(index)")
         }
     }
 }

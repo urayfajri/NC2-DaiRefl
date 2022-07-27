@@ -12,6 +12,12 @@
 		206F4A58288FCB32008C0D25 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A57288FCB32008C0D25 /* HomeView.swift */; };
 		206F4A5A2890D1EF008C0D25 /* TaskSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A592890D1EF008C0D25 /* TaskSubView.swift */; };
 		206F4A5C2890D68D008C0D25 /* GoalSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A5B2890D68D008C0D25 /* GoalSubView.swift */; };
+		206F4A5E2890FDD4008C0D25 /* ReflectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A5D2890FDD4008C0D25 /* ReflectionCellView.swift */; };
+		206F4A602891312A008C0D25 /* GoalCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A5F2891312A008C0D25 /* GoalCellView.swift */; };
+		206F4A6428913357008C0D25 /* AllReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A6328913357008C0D25 /* AllReflectionView.swift */; };
+		206F4A66289133AF008C0D25 /* ReflectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A65289133AF008C0D25 /* ReflectionCell.swift */; };
+		206F4A68289134BC008C0D25 /* AllTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A67289134BC008C0D25 /* AllTaskView.swift */; };
+		206F4A6A2891351E008C0D25 /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A692891351E008C0D25 /* TaskCellView.swift */; };
 		20FD9E64288E62E4004855F4 /* NC2_DaiReflApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */; };
 		20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E65288E62E4004855F4 /* ContentView.swift */; };
 		20FD9E68288E62E4004855F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FD9E67288E62E4004855F4 /* Assets.xcassets */; };
@@ -27,6 +33,12 @@
 		206F4A57288FCB32008C0D25 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		206F4A592890D1EF008C0D25 /* TaskSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSubView.swift; sourceTree = "<group>"; };
 		206F4A5B2890D68D008C0D25 /* GoalSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSubView.swift; sourceTree = "<group>"; };
+		206F4A5D2890FDD4008C0D25 /* ReflectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionCellView.swift; sourceTree = "<group>"; };
+		206F4A5F2891312A008C0D25 /* GoalCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCellView.swift; sourceTree = "<group>"; };
+		206F4A6328913357008C0D25 /* AllReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReflectionView.swift; sourceTree = "<group>"; };
+		206F4A65289133AF008C0D25 /* ReflectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionCell.swift; sourceTree = "<group>"; };
+		206F4A67289134BC008C0D25 /* AllTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskView.swift; sourceTree = "<group>"; };
+		206F4A692891351E008C0D25 /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
 		20FD9E60288E62E4004855F4 /* NC2-DaiRefl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NC2-DaiRefl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_DaiReflApp.swift; sourceTree = "<group>"; };
 		20FD9E65288E62E4004855F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				206F4A51288FC677008C0D25 /* AllGoalView.swift */,
+				206F4A5F2891312A008C0D25 /* GoalCellView.swift */,
 			);
 			path = Goal;
 			sourceTree = "<group>";
@@ -70,8 +83,27 @@
 				206F4A57288FCB32008C0D25 /* HomeView.swift */,
 				206F4A592890D1EF008C0D25 /* TaskSubView.swift */,
 				206F4A5B2890D68D008C0D25 /* GoalSubView.swift */,
+				206F4A5D2890FDD4008C0D25 /* ReflectionCellView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		206F4A61289132F9008C0D25 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				206F4A67289134BC008C0D25 /* AllTaskView.swift */,
+				206F4A692891351E008C0D25 /* TaskCellView.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		206F4A6228913303008C0D25 /* Reflection */ = {
+			isa = PBXGroup;
+			children = (
+				206F4A6328913357008C0D25 /* AllReflectionView.swift */,
+				206F4A65289133AF008C0D25 /* ReflectionCell.swift */,
+			);
+			path = Reflection;
 			sourceTree = "<group>";
 		};
 		20FD9E57288E62E4004855F4 = {
@@ -123,8 +155,10 @@
 		20FD9E84288FA89B004855F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				206F4A56288FCB1E008C0D25 /* Home */,
 				20FD9E65288E62E4004855F4 /* ContentView.swift */,
+				206F4A6228913303008C0D25 /* Reflection */,
+				206F4A61289132F9008C0D25 /* Task */,
+				206F4A56288FCB1E008C0D25 /* Home */,
 				206F4A53288FC80B008C0D25 /* Calendar */,
 				206F4A50288FC663008C0D25 /* Goal */,
 			);
@@ -202,15 +236,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				206F4A5C2890D68D008C0D25 /* GoalSubView.swift in Sources */,
+				206F4A68289134BC008C0D25 /* AllTaskView.swift in Sources */,
 				20FD9E86288FA8E1004855F4 /* CoreDataManager.swift in Sources */,
 				206F4A55288FC81E008C0D25 /* CalendarView.swift in Sources */,
 				206F4A52288FC677008C0D25 /* AllGoalView.swift in Sources */,
+				206F4A5E2890FDD4008C0D25 /* ReflectionCellView.swift in Sources */,
 				20FD9E89288FA965004855F4 /* DaiReflModel.xcdatamodeld in Sources */,
 				20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */,
 				206F4A5A2890D1EF008C0D25 /* TaskSubView.swift in Sources */,
 				206F4A58288FCB32008C0D25 /* HomeView.swift in Sources */,
 				20FD9E8B288FAA6A004855F4 /* GoalListViewModel.swift in Sources */,
+				206F4A6A2891351E008C0D25 /* TaskCellView.swift in Sources */,
+				206F4A66289133AF008C0D25 /* ReflectionCell.swift in Sources */,
 				20FD9E64288E62E4004855F4 /* NC2_DaiReflApp.swift in Sources */,
+				206F4A6428913357008C0D25 /* AllReflectionView.swift in Sources */,
+				206F4A602891312A008C0D25 /* GoalCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

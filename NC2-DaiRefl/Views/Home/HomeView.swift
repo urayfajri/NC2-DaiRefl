@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @StateObject private var goalListVM = GoalListViewModel()
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 40){
@@ -24,12 +26,12 @@ struct HomeView: View {
                     }
                     
                     HStack {
-                        NavigationLink(destination: AllGoalView()) {
+                        NavigationLink(destination: AllTaskView()) {
                             TaskSubView()
                         }
                         Spacer()
                         NavigationLink(destination: AllGoalView()) {
-                            GoalSubView()
+                            GoalSubView(totalGoal: goalListVM.goals.count)
                         }
                     }
                 }
@@ -37,14 +39,28 @@ struct HomeView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("My Reflections")
                         .font(.title)
-                    HStack {
-                        Text("Today")
-                        Spacer()
-                        NavigationLink(destination: AllGoalView()) {
-                            Text("View All")
+                    VStack (spacing: 4) {
+                        HStack {
+                            Text("Today")
+                            Spacer()
+                            NavigationLink(destination: AllReflectionView()) {
+                                Text("View All")
+                            }
+                        }
+                        HStack {
+                            Text("Reflection Date").font(.caption)
+                            Spacer()
                         }
                     }
-                }
+                    
+                    ScrollView {
+                        ForEach(goalListVM.goals, id: \.goalID) { reflection in
+                            ReflectionCellView()
+                        }
+                    }
+                }.onAppear(perform: {
+                    goalListVM.getAllGoals()
+                })
                 Spacer()
             }
             .navigationTitle("Home")
