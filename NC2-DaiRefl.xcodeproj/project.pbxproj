@@ -10,6 +10,8 @@
 		206F4A52288FC677008C0D25 /* AllGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A51288FC677008C0D25 /* AllGoalView.swift */; };
 		206F4A55288FC81E008C0D25 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A54288FC81E008C0D25 /* CalendarView.swift */; };
 		206F4A58288FCB32008C0D25 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A57288FCB32008C0D25 /* HomeView.swift */; };
+		206F4A5A2890D1EF008C0D25 /* TaskSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A592890D1EF008C0D25 /* TaskSubView.swift */; };
+		206F4A5C2890D68D008C0D25 /* GoalSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A5B2890D68D008C0D25 /* GoalSubView.swift */; };
 		20FD9E64288E62E4004855F4 /* NC2_DaiReflApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */; };
 		20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E65288E62E4004855F4 /* ContentView.swift */; };
 		20FD9E68288E62E4004855F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FD9E67288E62E4004855F4 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		206F4A51288FC677008C0D25 /* AllGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGoalView.swift; sourceTree = "<group>"; };
 		206F4A54288FC81E008C0D25 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		206F4A57288FCB32008C0D25 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		206F4A592890D1EF008C0D25 /* TaskSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSubView.swift; sourceTree = "<group>"; };
+		206F4A5B2890D68D008C0D25 /* GoalSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSubView.swift; sourceTree = "<group>"; };
 		20FD9E60288E62E4004855F4 /* NC2-DaiRefl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NC2-DaiRefl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_DaiReflApp.swift; sourceTree = "<group>"; };
 		20FD9E65288E62E4004855F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				206F4A57288FCB32008C0D25 /* HomeView.swift */,
+				206F4A592890D1EF008C0D25 /* TaskSubView.swift */,
+				206F4A5B2890D68D008C0D25 /* GoalSubView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -195,11 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206F4A5C2890D68D008C0D25 /* GoalSubView.swift in Sources */,
 				20FD9E86288FA8E1004855F4 /* CoreDataManager.swift in Sources */,
 				206F4A55288FC81E008C0D25 /* CalendarView.swift in Sources */,
 				206F4A52288FC677008C0D25 /* AllGoalView.swift in Sources */,
 				20FD9E89288FA965004855F4 /* DaiReflModel.xcdatamodeld in Sources */,
 				20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */,
+				206F4A5A2890D1EF008C0D25 /* TaskSubView.swift in Sources */,
 				206F4A58288FCB32008C0D25 /* HomeView.swift in Sources */,
 				20FD9E8B288FAA6A004855F4 /* GoalListViewModel.swift in Sources */,
 				20FD9E64288E62E4004855F4 /* NC2_DaiReflApp.swift in Sources */,
