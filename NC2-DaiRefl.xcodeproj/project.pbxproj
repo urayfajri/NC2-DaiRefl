@@ -19,6 +19,8 @@
 		206F4A68289134BC008C0D25 /* AllTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A67289134BC008C0D25 /* AllTaskView.swift */; };
 		206F4A6A2891351E008C0D25 /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A692891351E008C0D25 /* TaskCellView.swift */; };
 		206F4A6C28919CC3008C0D25 /* AddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A6B28919CC3008C0D25 /* AddGoalView.swift */; };
+		206F4A6F289207A6008C0D25 /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A6E289207A6008C0D25 /* DatePickerTextField.swift */; };
+		206F4A71289207F4008C0D25 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A70289207F4008C0D25 /* Globals.swift */; };
 		20FD9E64288E62E4004855F4 /* NC2_DaiReflApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */; };
 		20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E65288E62E4004855F4 /* ContentView.swift */; };
 		20FD9E68288E62E4004855F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FD9E67288E62E4004855F4 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		206F4A67289134BC008C0D25 /* AllTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskView.swift; sourceTree = "<group>"; };
 		206F4A692891351E008C0D25 /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
 		206F4A6B28919CC3008C0D25 /* AddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalView.swift; sourceTree = "<group>"; };
+		206F4A6E289207A6008C0D25 /* DatePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
+		206F4A70289207F4008C0D25 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		20FD9E60288E62E4004855F4 /* NC2-DaiRefl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NC2-DaiRefl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_DaiReflApp.swift; sourceTree = "<group>"; };
 		20FD9E65288E62E4004855F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 			path = Reflection;
 			sourceTree = "<group>";
 		};
+		206F4A6D28920775008C0D25 /* Helfer */ = {
+			isa = PBXGroup;
+			children = (
+				206F4A6E289207A6008C0D25 /* DatePickerTextField.swift */,
+				206F4A70289207F4008C0D25 /* Globals.swift */,
+			);
+			path = Helfer;
+			sourceTree = "<group>";
+		};
 		20FD9E57288E62E4004855F4 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */,
+				206F4A6D28920775008C0D25 /* Helfer */,
 				20FD9E83288FA889004855F4 /* ViewModels */,
 				20FD9E84288FA89B004855F4 /* Views */,
 				20FD9E67288E62E4004855F4 /* Assets.xcassets */,
@@ -243,6 +257,8 @@
 				206F4A68289134BC008C0D25 /* AllTaskView.swift in Sources */,
 				20FD9E86288FA8E1004855F4 /* CoreDataManager.swift in Sources */,
 				206F4A55288FC81E008C0D25 /* CalendarView.swift in Sources */,
+				206F4A6F289207A6008C0D25 /* DatePickerTextField.swift in Sources */,
+				206F4A71289207F4008C0D25 /* Globals.swift in Sources */,
 				206F4A52288FC677008C0D25 /* AllGoalView.swift in Sources */,
 				206F4A5E2890FDD4008C0D25 /* ReflectionCellView.swift in Sources */,
 				20FD9E89288FA965004855F4 /* DaiReflModel.xcdatamodeld in Sources */,

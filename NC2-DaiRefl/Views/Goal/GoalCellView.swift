@@ -38,7 +38,7 @@ struct GoalCellView: View {
                 
                 HStack {
                     Spacer()
-                    Text("Goal Date")
+                    Text(Date(), style: .date)
                         .font(.subheadline).bold()
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)

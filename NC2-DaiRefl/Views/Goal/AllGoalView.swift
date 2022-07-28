@@ -12,32 +12,30 @@ struct AllGoalView: View {
     @StateObject private var goalListVM = GoalListViewModel()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                ScrollView {
-                    ForEach(goalListVM.goals, id: \.goalID) { goal in
-                        GoalCellView(goalName: goal.goalName, goalDescription: goal.goalDescription, goalDate: goal.goalDate)
-                    }
+        VStack {
+            ScrollView {
+                ForEach(goalListVM.goals, id: \.goalID) { goal in
+                    GoalCellView(goalName: goal.goalName, goalDescription: goal.goalDescription, goalDate: goal.goalDate)
                 }
             }
-            .navigationTitle("All Goal")
-            .navigationBarTitleDisplayMode(.automatic)
-            .navigationViewStyle(.stack)
-            .padding(.horizontal, 16)
-            .onAppear(perform: {
-                goalListVM.getAllGoals()
-            })
-            .navigationBarItems(
-                trailing:
-                    NavigationLink(
-                        destination: AddGoalView(),
-                        label: {
-                            Image(systemName: "plus.app")
-                        }
-                    )
-            )
-            Spacer()
         }
+        .navigationTitle("All Goal")
+        .navigationBarTitleDisplayMode(.large)
+        .navigationViewStyle(.stack)
+        .padding(.horizontal, 16)
+        .onAppear(perform: {
+            goalListVM.getAllGoals()
+        })
+        .navigationBarItems(
+            trailing:
+                NavigationLink(
+                    destination: AddGoalView(),
+                    label: {
+                        Image(systemName: "plus.app")
+                    }
+                )
+        )
+        Spacer()
     }
 }
 

@@ -10,6 +10,7 @@ import SwiftUI
 struct AddGoalView: View {
     
     @StateObject private var goalListVM = GoalListViewModel()
+    @State private var dateGoal: Date? = nil
     
     var body: some View {
         VStack(spacing: 24) {
@@ -19,6 +20,14 @@ struct AddGoalView: View {
                     .font(.subheadline)
                 TextField("Enter Goal Name", text: $goalListVM.goalName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+            }
+            
+            VStack(alignment: .leading ,spacing: 8) {
+                Text("Goal Date")
+                    .fontWeight(.semibold)
+                    .font(.subheadline)
+                
+                DatePickerTextField(placeholder: "Select Goal Date", date: $dateGoal)
             }
             
             VStack(alignment: .leading ,spacing: 8) {
@@ -36,8 +45,10 @@ struct AddGoalView: View {
             HStack {
                 Spacer()
                 Button("Save") {
+                    goalListVM.goalDate = dateGoal ?? Date()
+                    print(goalListVM.goalDate)
                     goalListVM.saveGoal()
-                    goalListVM.getAllGoals()
+                    // goalListVM.getAllGoals()
                 }
                 .foregroundColor(.white)
                 .padding()
@@ -49,6 +60,8 @@ struct AddGoalView: View {
     
         }
         .padding()
+        .navigationTitle("Add Goal")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -57,3 +70,4 @@ struct AddGoalView_Previews: PreviewProvider {
         AddGoalView()
     }
 }
+

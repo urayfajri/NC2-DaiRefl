@@ -21,6 +21,8 @@ class GoalListViewModel: ObservableObject {
     }
     
     func saveGoal() {
+        
+        print("update goal", goalDate)
         let goal = Goal(context: CoreDataManager.shared.viewContext)
         goal.goalName = goalName
         goal.goalDate = goalDate
