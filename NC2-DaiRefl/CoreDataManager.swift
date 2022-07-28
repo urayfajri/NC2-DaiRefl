@@ -28,7 +28,6 @@ class CoreDataManager {
     
     func getAllGoals() -> [Goal] {
         let request: NSFetchRequest<Goal> = Goal.fetchRequest()
-        
         do {
             return try viewContext.fetch(request)
         } catch {

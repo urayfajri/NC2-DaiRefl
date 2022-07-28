@@ -27,7 +27,7 @@ struct AddGoalView: View {
                     .fontWeight(.semibold)
                     .font(.subheadline)
                 
-                DatePickerTextField(placeholder: "Select Goal Date", date: $dateGoal)
+                DatePickerTextField(placeholder: "Select Goal Date", date: $dateGoal).frame(height: 20)
             }
             
             VStack(alignment: .leading ,spacing: 8) {
@@ -46,7 +46,6 @@ struct AddGoalView: View {
                 Spacer()
                 Button("Save") {
                     goalListVM.goalDate = dateGoal ?? Date()
-                    print(goalListVM.goalDate)
                     goalListVM.saveGoal()
                     // goalListVM.getAllGoals()
                 }
