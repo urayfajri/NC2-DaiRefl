@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject private var goalListVM = GoalListViewModel()
+    @StateObject private var taskListVM = TaskListViewModel()
     
     var body: some View {
         NavigationView {
@@ -27,7 +28,7 @@ struct HomeView: View {
                     
                     HStack {
                         NavigationLink(destination: AllTaskView()) {
-                            TaskSubView()
+                            TaskSubView(totalTask: taskListVM.tasks.count)
                         }
                         Spacer()
                         NavigationLink(destination: AllGoalView()) {

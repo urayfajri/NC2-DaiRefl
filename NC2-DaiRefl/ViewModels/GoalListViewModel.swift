@@ -49,4 +49,8 @@ struct GoalViewModel {
     var goalDate: Date {
         return goal.goalDate ?? Date()
     }
+    
+    var goalTasks: NSSet {
+        return goal.toMyTasks ?? []
+    }
 }

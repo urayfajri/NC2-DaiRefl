@@ -9,24 +9,32 @@ import SwiftUI
 
 struct AllTaskView: View {
     
-    @StateObject private var goalListVM = GoalListViewModel()
+    @StateObject private var taskListVM = TaskListViewModel()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                ScrollView {
-                    ForEach(goalListVM.goals, id: \.goalID) { task in
-                        TaskCellView(taskName: task.goalName, taskDescription: task.goalDescription, taskDate: task.goalDate)
-                    }
+        VStack {
+            ScrollView {
+                ForEach(taskListVM.tasks, id: \.taskID) { task in
+                    TaskCellView(taskName: task.taskName, taskDescription: task.taskDescription, taskDate: task.taskDate)
                 }
             }
-            .navigationTitle("All Tasks")
-            .padding(.horizontal, 16)
-            .onAppear(perform: {
-                goalListVM.getAllGoals()
-            })
-            Spacer()
         }
+        .navigationTitle("All Tasks")
+        .navigationBarTitleDisplayMode(.large)
+        .padding(.horizontal, 16)
+        .onAppear(perform: {
+            taskListVM.getAllTasks()
+        })
+        .navigationBarItems(
+            trailing:
+                NavigationLink(
+                    destination: AddTaskView(),
+                    label: {
+                        Image(systemName: "plus.app")
+                    }
+                )
+        )
+        Spacer()
     }
 }
 

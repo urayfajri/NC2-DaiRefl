@@ -4,8 +4,16 @@
         <attribute name="goalDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="goalDescription" attributeType="String"/>
         <attribute name="goalName" attributeType="String"/>
+        <relationship name="toMyTasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MyTask" inverseName="toGoal" inverseEntity="MyTask"/>
+    </entity>
+    <entity name="MyTask" representedClassName="MyTask" syncable="YES" codeGenerationType="class">
+        <attribute name="taskDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="taskDescription" attributeType="String"/>
+        <attribute name="taskName" attributeType="String"/>
+        <relationship name="toGoal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="toMyTasks" inverseEntity="Goal"/>
     </entity>
     <elements>
-        <element name="Goal" positionX="-45" positionY="0" width="128" height="74"/>
+        <element name="Goal" positionX="-270.515625" positionY="95.83203125" width="128" height="89"/>
+        <element name="MyTask" positionX="-148.74609375" positionY="-102.2734375" width="128" height="89"/>
     </elements>
 </model>

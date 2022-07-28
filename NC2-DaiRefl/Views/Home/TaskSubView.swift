@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TaskSubView: View {
     
+    let totalTask: Int
+    
     var body: some View {
         ZStack {
             VStack (alignment: .leading) {
@@ -20,7 +22,7 @@ struct TaskSubView: View {
                     .padding(.leading)
                 
                 HStack {
-                    Text("54")
+                    Text(String(totalTask))
                         .font(.subheadline).bold()
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)
@@ -42,11 +44,5 @@ struct TaskSubView: View {
         .background(Color.green)
         .cornerRadius(12)
         .shadow(color: .green, radius: 6, x: 0.0, y: 0.0)
-    }
-}
-
-struct TaskSubView_Previews: PreviewProvider {
-    static var previews: some View {
-        TaskSubView()
     }
 }

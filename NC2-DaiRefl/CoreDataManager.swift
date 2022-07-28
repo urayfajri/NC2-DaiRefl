@@ -35,6 +35,24 @@ class CoreDataManager {
         }
     }
     
+    func getAllTasks() -> [MyTask] {
+        let request: NSFetchRequest<MyTask> = MyTask.fetchRequest()
+        do {
+            return try viewContext.fetch(request)
+        } catch {
+            return []
+        }
+    }
+    
+    func saveTask() {
+        do {
+            try viewContext.save()
+        } catch {
+            viewContext.rollback()
+            print(error.localizedDescription)
+        }
+    }
+    
     private init() {
         persistentContainer = NSPersistentContainer(name: "DaiReflModel")
         persistentContainer.loadPersistentStores { (description, error) in
