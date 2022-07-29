@@ -12,21 +12,30 @@ struct AllReflectionView: View {
     @StateObject private var goalListVM = GoalListViewModel()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                ScrollView {
-                    ForEach(goalListVM.goals, id: \.goalID) { reflection in
-                        ReflectionCell(reflectionName: reflection.goalName, reflectionDescription: reflection.goalDescription, reflectionDate: reflection.goalDate)
-                    }
+        VStack {
+            ScrollView {
+                ForEach(goalListVM.goals, id: \.goalID) { goal in
+                    GoalCellView(goalName: goal.goalName, goalDescription: goal.goalDescription, goalDate: goal.goalDate)
                 }
             }
-            .navigationTitle("All Reflections")
-            .padding(.horizontal, 16)
-            .onAppear(perform: {
-                goalListVM.getAllGoals()
-            })
-            Spacer()
         }
+        .navigationTitle("All Goal")
+        .navigationBarTitleDisplayMode(.large)
+        .navigationViewStyle(.stack)
+        .padding(.horizontal, 16)
+        .onAppear(perform: {
+            goalListVM.getAllGoals()
+        })
+        .navigationBarItems(
+            trailing:
+                NavigationLink(
+                    destination: AddGoalView(),
+                    label: {
+                        Image(systemName: "plus.app")
+                    }
+                )
+        )
+        Spacer()
     }
 }
 

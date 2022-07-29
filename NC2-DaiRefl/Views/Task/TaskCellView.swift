@@ -31,7 +31,7 @@ struct TaskCellView: View {
                 
                 HStack {
                     Spacer()
-                    Text("Task Date")
+                    Text(taskDate, style: .date)
                         .font(.subheadline).bold()
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)

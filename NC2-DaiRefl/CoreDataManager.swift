@@ -53,6 +53,24 @@ class CoreDataManager {
         }
     }
     
+    func getAllReflections() -> [MyReflection] {
+        let request: NSFetchRequest<MyReflection> = MyReflection.fetchRequest()
+        do {
+            return try viewContext.fetch(request)
+        } catch {
+            return []
+        }
+    }
+    
+    func saveReflection() {
+        do {
+            try viewContext.save()
+        } catch {
+            viewContext.rollback()
+            print(error.localizedDescription)
+        }
+    }
+    
     private init() {
         persistentContainer = NSPersistentContainer(name: "DaiReflModel")
         persistentContainer.loadPersistentStores { (description, error) in

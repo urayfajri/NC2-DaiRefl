@@ -23,6 +23,15 @@
 		206F4A71289207F4008C0D25 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A70289207F4008C0D25 /* Globals.swift */; };
 		206F4A732892847A008C0D25 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A722892847A008C0D25 /* AddTaskView.swift */; };
 		206F4A75289284F5008C0D25 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A74289284F5008C0D25 /* TaskListViewModel.swift */; };
+		206F4A802893B2C4008C0D25 /* CustomPickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A7F2893B2C4008C0D25 /* CustomPickerTextField.swift */; };
+		206F4A902893BC03008C0D25 /* ReflectionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A8F2893BC03008C0D25 /* ReflectionListViewModel.swift */; };
+		206F4A972893BCF2008C0D25 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A912893BCF2008C0D25 /* Goal+CoreDataClass.swift */; };
+		206F4A982893BCF2008C0D25 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A922893BCF2008C0D25 /* Goal+CoreDataProperties.swift */; };
+		206F4A992893BCF2008C0D25 /* MyTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A932893BCF2008C0D25 /* MyTask+CoreDataClass.swift */; };
+		206F4A9A2893BCF2008C0D25 /* MyTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A942893BCF2008C0D25 /* MyTask+CoreDataProperties.swift */; };
+		206F4A9B2893BCF2008C0D25 /* MyReflection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A952893BCF2008C0D25 /* MyReflection+CoreDataClass.swift */; };
+		206F4A9C2893BCF2008C0D25 /* MyReflection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A962893BCF2008C0D25 /* MyReflection+CoreDataProperties.swift */; };
+		206F4A9E2893BDC5008C0D25 /* AddReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F4A9D2893BDC5008C0D25 /* AddReflectionView.swift */; };
 		20FD9E64288E62E4004855F4 /* NC2_DaiReflApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */; };
 		20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FD9E65288E62E4004855F4 /* ContentView.swift */; };
 		20FD9E68288E62E4004855F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FD9E67288E62E4004855F4 /* Assets.xcassets */; };
@@ -49,6 +58,15 @@
 		206F4A70289207F4008C0D25 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		206F4A722892847A008C0D25 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		206F4A74289284F5008C0D25 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		206F4A7F2893B2C4008C0D25 /* CustomPickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerTextField.swift; sourceTree = "<group>"; };
+		206F4A8F2893BC03008C0D25 /* ReflectionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionListViewModel.swift; sourceTree = "<group>"; };
+		206F4A912893BCF2008C0D25 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		206F4A922893BCF2008C0D25 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		206F4A932893BCF2008C0D25 /* MyTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyTask+CoreDataClass.swift"; sourceTree = "<group>"; };
+		206F4A942893BCF2008C0D25 /* MyTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		206F4A952893BCF2008C0D25 /* MyReflection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyReflection+CoreDataClass.swift"; sourceTree = "<group>"; };
+		206F4A962893BCF2008C0D25 /* MyReflection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyReflection+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		206F4A9D2893BDC5008C0D25 /* AddReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReflectionView.swift; sourceTree = "<group>"; };
 		20FD9E60288E62E4004855F4 /* NC2-DaiRefl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NC2-DaiRefl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_DaiReflApp.swift; sourceTree = "<group>"; };
 		20FD9E65288E62E4004855F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +132,7 @@
 			children = (
 				206F4A6328913357008C0D25 /* AllReflectionView.swift */,
 				206F4A65289133AF008C0D25 /* ReflectionCell.swift */,
+				206F4A9D2893BDC5008C0D25 /* AddReflectionView.swift */,
 			);
 			path = Reflection;
 			sourceTree = "<group>";
@@ -123,8 +142,22 @@
 			children = (
 				206F4A6E289207A6008C0D25 /* DatePickerTextField.swift */,
 				206F4A70289207F4008C0D25 /* Globals.swift */,
+				206F4A7F2893B2C4008C0D25 /* CustomPickerTextField.swift */,
 			);
 			path = Helfer;
+			sourceTree = "<group>";
+		};
+		206F4A7628928AFF008C0D25 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				206F4A912893BCF2008C0D25 /* Goal+CoreDataClass.swift */,
+				206F4A922893BCF2008C0D25 /* Goal+CoreDataProperties.swift */,
+				206F4A932893BCF2008C0D25 /* MyTask+CoreDataClass.swift */,
+				206F4A942893BCF2008C0D25 /* MyTask+CoreDataProperties.swift */,
+				206F4A952893BCF2008C0D25 /* MyReflection+CoreDataClass.swift */,
+				206F4A962893BCF2008C0D25 /* MyReflection+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		20FD9E57288E62E4004855F4 = {
@@ -147,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				20FD9E63288E62E4004855F4 /* NC2_DaiReflApp.swift */,
+				206F4A7628928AFF008C0D25 /* Models */,
 				206F4A6D28920775008C0D25 /* Helfer */,
 				20FD9E83288FA889004855F4 /* ViewModels */,
 				20FD9E84288FA89B004855F4 /* Views */,
@@ -171,6 +205,7 @@
 			children = (
 				20FD9E8A288FAA6A004855F4 /* GoalListViewModel.swift */,
 				206F4A74289284F5008C0D25 /* TaskListViewModel.swift */,
+				206F4A8F2893BC03008C0D25 /* ReflectionListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -260,6 +295,8 @@
 			files = (
 				206F4A5C2890D68D008C0D25 /* GoalSubView.swift in Sources */,
 				206F4A6C28919CC3008C0D25 /* AddGoalView.swift in Sources */,
+				206F4A972893BCF2008C0D25 /* Goal+CoreDataClass.swift in Sources */,
+				206F4A9C2893BCF2008C0D25 /* MyReflection+CoreDataProperties.swift in Sources */,
 				206F4A68289134BC008C0D25 /* AllTaskView.swift in Sources */,
 				20FD9E86288FA8E1004855F4 /* CoreDataManager.swift in Sources */,
 				206F4A55288FC81E008C0D25 /* CalendarView.swift in Sources */,
@@ -269,16 +306,23 @@
 				206F4A5E2890FDD4008C0D25 /* ReflectionCellView.swift in Sources */,
 				20FD9E89288FA965004855F4 /* DaiReflModel.xcdatamodeld in Sources */,
 				20FD9E66288E62E4004855F4 /* ContentView.swift in Sources */,
+				206F4A9B2893BCF2008C0D25 /* MyReflection+CoreDataClass.swift in Sources */,
 				206F4A732892847A008C0D25 /* AddTaskView.swift in Sources */,
 				206F4A5A2890D1EF008C0D25 /* TaskSubView.swift in Sources */,
+				206F4A902893BC03008C0D25 /* ReflectionListViewModel.swift in Sources */,
+				206F4A9E2893BDC5008C0D25 /* AddReflectionView.swift in Sources */,
 				206F4A58288FCB32008C0D25 /* HomeView.swift in Sources */,
 				206F4A75289284F5008C0D25 /* TaskListViewModel.swift in Sources */,
 				20FD9E8B288FAA6A004855F4 /* GoalListViewModel.swift in Sources */,
 				206F4A6A2891351E008C0D25 /* TaskCellView.swift in Sources */,
 				206F4A66289133AF008C0D25 /* ReflectionCell.swift in Sources */,
+				206F4A982893BCF2008C0D25 /* Goal+CoreDataProperties.swift in Sources */,
 				20FD9E64288E62E4004855F4 /* NC2_DaiReflApp.swift in Sources */,
+				206F4A992893BCF2008C0D25 /* MyTask+CoreDataClass.swift in Sources */,
 				206F4A6428913357008C0D25 /* AllReflectionView.swift in Sources */,
+				206F4A802893B2C4008C0D25 /* CustomPickerTextField.swift in Sources */,
 				206F4A602891312A008C0D25 /* GoalCellView.swift in Sources */,
+				206F4A9A2893BCF2008C0D25 /* MyTask+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

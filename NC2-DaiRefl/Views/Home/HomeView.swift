@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @StateObject private var goalListVM = GoalListViewModel()
     @StateObject private var taskListVM = TaskListViewModel()
+    @StateObject private var reflectionListVM = ReflectionListViewModel()
     
     var body: some View {
         NavigationView {
@@ -25,7 +26,7 @@ struct HomeView: View {
                         }
                         Spacer()
                     }
-                    
+        
                     HStack {
                         NavigationLink(destination: AllTaskView()) {
                             TaskSubView(totalTask: taskListVM.tasks.count)
@@ -61,6 +62,8 @@ struct HomeView: View {
                     }
                 }.onAppear(perform: {
                     goalListVM.getAllGoals()
+                    taskListVM.getAllTasks()
+                    reflectionListVM.getReflections()
                 })
                 Spacer()
             }

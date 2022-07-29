@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Goal" representedClassName="Goal" syncable="YES" codeGenerationType="class">
+    <entity name="Goal" representedClassName="Goal" syncable="YES">
         <attribute name="goalDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="goalDescription" attributeType="String"/>
         <attribute name="goalName" attributeType="String"/>
         <relationship name="toMyTasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MyTask" inverseName="toGoal" inverseEntity="MyTask"/>
     </entity>
-    <entity name="MyTask" representedClassName="MyTask" syncable="YES" codeGenerationType="class">
+    <entity name="MyReflection" representedClassName="MyReflection" syncable="YES">
+        <attribute name="reflectionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="reflectionDescription" optional="YES" attributeType="String"/>
+        <attribute name="reflectionName" optional="YES" attributeType="String"/>
+        <relationship name="toMyTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyTask" inverseName="toMyReflections" inverseEntity="MyTask"/>
+    </entity>
+    <entity name="MyTask" representedClassName="MyTask" syncable="YES">
         <attribute name="taskDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="taskDescription" attributeType="String"/>
         <attribute name="taskName" attributeType="String"/>
         <relationship name="toGoal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="toMyTasks" inverseEntity="Goal"/>
+        <relationship name="toMyReflections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MyReflection" inverseName="toMyTask" inverseEntity="MyReflection"/>
     </entity>
     <elements>
         <element name="Goal" positionX="-270.515625" positionY="95.83203125" width="128" height="89"/>
-        <element name="MyTask" positionX="-148.74609375" positionY="-102.2734375" width="128" height="89"/>
+        <element name="MyTask" positionX="-148.74609375" positionY="-102.2734375" width="128" height="104"/>
+        <element name="MyReflection" positionX="-189" positionY="45" width="128" height="89"/>
     </elements>
 </model>
