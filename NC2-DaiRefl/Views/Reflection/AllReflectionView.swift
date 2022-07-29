@@ -8,28 +8,28 @@
 import SwiftUI
 
 struct AllReflectionView: View {
-    
-    @StateObject private var goalListVM = GoalListViewModel()
+
+    @StateObject private var reflectionListVM = ReflectionListViewModel()
     
     var body: some View {
         VStack {
             ScrollView {
-                ForEach(goalListVM.goals, id: \.goalID) { goal in
-                    GoalCellView(goalName: goal.goalName, goalDescription: goal.goalDescription, goalDate: goal.goalDate)
+                ForEach(reflectionListVM.reflections, id: \.reflectionID) { reflection in
+                    ReflectionCell(reflectionName: reflection.reflectionName, reflectionDescription: reflection.reflectionDescription, reflectionDate: reflection.reflectionDate)
                 }
             }
         }
-        .navigationTitle("All Goal")
+        .navigationTitle("All Reflection")
         .navigationBarTitleDisplayMode(.large)
         .navigationViewStyle(.stack)
         .padding(.horizontal, 16)
         .onAppear(perform: {
-            goalListVM.getAllGoals()
+            reflectionListVM.getReflections()
         })
         .navigationBarItems(
             trailing:
                 NavigationLink(
-                    destination: AddGoalView(),
+                    destination: AddReflectionView(),
                     label: {
                         Image(systemName: "plus.app")
                     }

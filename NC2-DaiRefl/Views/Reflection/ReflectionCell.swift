@@ -31,7 +31,7 @@ struct ReflectionCell: View {
                 
                 HStack {
                     Spacer()
-                    Text("Reflection Date")
+                    Text(reflectionDate, style: .date)
                         .font(.subheadline).bold()
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)

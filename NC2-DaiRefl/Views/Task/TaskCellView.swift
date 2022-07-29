@@ -40,7 +40,7 @@ struct TaskCellView: View {
 
             }
         }
-        .background(Color.blue)
+        .background(Color.green)
         .cornerRadius(12)
     }
 }

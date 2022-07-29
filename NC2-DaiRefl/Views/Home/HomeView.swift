@@ -56,8 +56,8 @@ struct HomeView: View {
                     }
                     
                     ScrollView {
-                        ForEach(goalListVM.goals, id: \.goalID) { reflection in
-                            ReflectionCellView()
+                        ForEach(reflectionListVM.reflections, id: \.reflectionID) { reflection in
+                            ReflectionCellView(goalName: reflection.reflectionName, goalDescription: reflection.reflectionDescription)
                         }
                     }
                 }.onAppear(perform: {

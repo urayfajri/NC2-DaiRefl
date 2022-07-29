@@ -9,16 +9,19 @@ import SwiftUI
 
 struct ReflectionCellView: View {
     
+    let goalName: String
+    let goalDescription: String
+    
     var body: some View {
         ZStack {
             VStack (alignment: .leading) {
-                Text("Reflection Name")
+                Text(goalName)
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding(.top, 16)
                     .padding(.leading)
                 
-                Text("Reflection Description")
+                Text(goalDescription)
                     .font(.subheadline).bold()
                     .foregroundColor(.white)
                     .padding(.horizontal, 16)
@@ -33,11 +36,5 @@ struct ReflectionCellView: View {
         }
         .background(Color.blue)
         .cornerRadius(12)
-    }
-}
-
-struct ReflectionCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReflectionCellView()
     }
 }

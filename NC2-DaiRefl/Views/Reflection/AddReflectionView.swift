@@ -73,7 +73,7 @@ struct AddReflectionView: View {
     
         }
         .padding()
-        .navigationTitle("Add Task")
+        .navigationTitle("Add Reflection")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

@@ -34,7 +34,7 @@ class ReflectionListViewModel: ObservableObject {
 struct ReflectionViewModel {
     let reflection: MyReflection
     
-    var taskID: NSManagedObjectID {
+    var reflectionID: NSManagedObjectID {
         return reflection.objectID
     }
     

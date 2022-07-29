@@ -47,7 +47,7 @@ struct GoalCellView: View {
 
             }
         }
-        .background(Color.blue)
+        .background(Color.red)
         .cornerRadius(12)
     }
 }
